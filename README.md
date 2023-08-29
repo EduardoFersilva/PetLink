@@ -9,4 +9,4 @@
 4- Funcionalidade "Minha Ong" na qual a instituição consegue verificar anuncios ativos
   4.1- Inativação de anuncio;
   4.2- Edição de anuncio;
-  4.3- Cadastro de animal para doação;
+  4.3- Cadastro de animal para doação
