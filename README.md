@@ -23,9 +23,9 @@ DESIGN INICIAL (PROTOTIPO)
 ![telaInicial](Petlink/images/imagem_2023-09-13_210524947.png)
 
 <br>
-<img src="Petlink/images/imagem_2023-09-13_210546636.png">
+<img src="PetLink/images/imagem_2023-09-13_210546636.png">
 
-![loginOng](Petlink/images/imagem_2023-09-13_210546636.png)
+![loginOng](PetLink/images/imagem_2023-09-13_210546636.png)
 
 <br>
 <img src="Petlink/images/imagem_2023-09-13_210559466.png">
