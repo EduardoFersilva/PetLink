@@ -18,26 +18,20 @@ PROTOTIPAÇÃO INICIAL ENTIDADE-ATRIBUTO DB
 <img src="PetLink/images/modelagem.svg">
 
 DESIGN INICIAL (PROTOTIPO)
-<img src="Petlink/images/imagem_2023-09-13_210524947.png">
-
-![telaInicial](Petlink/images/imagem_2023-09-13_210524947.png)
+![telaInicial](PetLink/images/imagem_2023-09-13_210524947.png)
 
 <br>
-<img src="PetLink/images/imagem_2023-09-13_210546636.png">
 
 ![loginOng](PetLink/images/imagem_2023-09-13_210546636.png)
 
 <br>
-<img src="Petlink/images/imagem_2023-09-13_210559466.png">
 
-![cadastroPetlink](Petlink/images/imagem_2023-09-13_210559466.png)
+![cadastroPetlink](PetLink/images/imagem_2023-09-13_210559466.png)
 <br>
-<img src="Petlink/images/imagem_2023-09-13_210610180.png">
 
-![sidebar](Petlink/images/imagem_2023-09-13_210610180.png)
+![sidebar](PetLink/images/imagem_2023-09-13_210610180.png)
 <br>
-<img src="Petlink/images/imagem_2023-09-13_210722087.png">
 
-![feedAnimais](Petlink/images/imagem_2023-09-13_210722087.png)
+![feedAnimais](PetLink/images/imagem_2023-09-13_210722087.png)
 
 
