@@ -18,6 +18,7 @@ PROTOTIPAÇÃO INICIAL ENTIDADE-ATRIBUTO DB
 <img src="PetLink/images/modelagem.svg">
 
 DESIGN INICIAL (PROTOTIPO)
+<br>
 ![telaInicial](PetLink/images/imagem_2023-09-13_210524947.png)
 
 <br>
