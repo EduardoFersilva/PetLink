@@ -19,13 +19,11 @@ public class CreatePetServlet  extends HttpServlet {
 
         String petName = request.getParameter("pet-name");
 
-       Pet pet = new Pet();
-       pet.setName(petName);
+       Pet pet = new Pet(petName);
        new PetDao().createPet(pet);
 
 
-        request.getRequestDispatcher("index.html").forward(request, response);
-
+        response.sendRedirect("/find-all-pets");
     }
 
 }
