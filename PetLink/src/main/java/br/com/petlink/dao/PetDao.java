@@ -55,9 +55,11 @@ public class PetDao {
             List<Pet> pets = new ArrayList<>();
 
             while (resultSet.next()) {
+
+                String petId = resultSet.getString("id");
                 String petName = resultSet.getString("name");
 
-                Pet pet = new Pet(petName);
+                Pet pet = new Pet(petId,petName);
 
                 pets.add(pet);
 
@@ -74,6 +76,28 @@ public class PetDao {
 
                 return Collections.emptyList();
 
-        } }}
+        } }
+    public void deletePetById(String petId) {
+
+        String SQL = "DELETE PET WHERE ID = ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, petId);
+            preparedStatement.execute();
+
+            System.out.println("success in insert pet" + petId);
+
+            connection.close();
+        }
+        catch (Exception e){
+        System.out.println("fail in database connection");
+    }
+}
+}
 
 
