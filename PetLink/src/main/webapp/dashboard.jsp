@@ -24,6 +24,8 @@
                     <form action="/delete-pet" method="post">
                         <input type="hidden" id="id" name="id" value="${pet.id}">
                         <button type="submit">Delete</button>
+                        <span> | </span>
+                        <a href="index.jsp?id=${pet.id}&name=${pet.name}">Update</a>
                     </form>
                 </td>
             </tr>
