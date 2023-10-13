@@ -35,14 +35,9 @@ public class Users {
         return cep;
     }
 
-    public Users(String userName, String password, String email, String cpf, String idade, String endereco, String cep) {
+    public Users(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.email = email;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.endereco = endereco;
-        this.cep = cep;
     }
 
     private String cpf ;
