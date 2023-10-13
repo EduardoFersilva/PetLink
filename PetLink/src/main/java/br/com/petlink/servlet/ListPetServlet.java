@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/find-all-pets")
+@WebServlet({"/find-all-pets","/admin/find-all-pets"})
 public class ListPetServlet extends HttpServlet {
 
     @Override

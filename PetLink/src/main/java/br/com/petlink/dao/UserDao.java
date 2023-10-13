@@ -11,7 +11,7 @@ public class UserDao {
 
     public boolean verifyCredentials(Users users) {
 
-        String SQL = "SELECT * FROM USERS WHERE USERNAME = 'rafael'";
+        String SQL = "SELECT * FROM USERS WHERE USERNAME =  ?";
 
         try{
 
@@ -20,7 +20,7 @@ public class UserDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, users.getUserName());
-           ResultSet resultSet =  preparedStatement.executeQuery();
+            ResultSet resultSet =  preparedStatement.executeQuery();
             System.out.println("sucess in select username");
 
            while(resultSet.next()){
