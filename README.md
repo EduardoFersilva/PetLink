@@ -34,6 +34,3 @@ DESIGN INICIAL (PROTOTIPO)
 <br>
 
 ![feedAnimais](PetLink/images/imagem_2023-09-13_210722087.png)
-
-
->>>>>>> 7a56f0eeb666110927ecd49330b8c5ae5fe5919d
