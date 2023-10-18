@@ -7,6 +7,44 @@ public class Users {
 
     private String email;
 
+    public Users() {
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+        this.cpf = cpf;
+        this.idade = idade;
+        this.endereco = endereco;
+        this.cep = cep;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
     public String getUserName() {
         return userName;
     }

@@ -1,13 +1,45 @@
 package br.com.petlink.dao;
 
 import br.com.petlink.config.ConnectionPoolConfig;
+import br.com.petlink.model.Pet;
 import br.com.petlink.model.Users;
+import org.h2.engine.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UserDao {
+
+    public void createUser(Users users) {
+
+        String SQL = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL,CPF) VALUES (?, ? , ? , ?)";
+
+        try {
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, users.getUserName());
+            preparedStatement.setString(2, users.getPassword());
+            preparedStatement.setString(3, users.getEmail());
+            preparedStatement.setString(4, users.getCpf());
+
+
+
+            preparedStatement.execute();
+
+            System.out.println("success in insert user");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
+        }
+    }
 
     public boolean verifyCredentials(Users users) {
 
