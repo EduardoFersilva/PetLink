@@ -13,7 +13,7 @@ public class UserDao {
 
     public void createUser(Users users) {
 
-        String SQL = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL,CPF) VALUES (?, ? , ? , ?)";
+        String SQL = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL,CPF,AGE,ADDRESS,CEP) VALUES (?, ? , ? , ? , ? ,? , ?)";
 
         try {
 
@@ -25,8 +25,9 @@ public class UserDao {
             preparedStatement.setString(2, users.getPassword());
             preparedStatement.setString(3, users.getEmail());
             preparedStatement.setString(4, users.getCpf());
-
-
+            preparedStatement.setString(5, users.getAge());
+            preparedStatement.setString(6, users.getAddress());
+            preparedStatement.setString(7, users.getCep());
 
             preparedStatement.execute();
 

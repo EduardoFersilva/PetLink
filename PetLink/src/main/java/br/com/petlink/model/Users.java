@@ -4,17 +4,27 @@ public class Users {
 
     private String userName;
     private String password;
-
     private String email;
+    private String cpf;
+    private String age;
+    private String address;
+    private String cep;
 
-    public Users() {
+    public Users(String userName, String password, String email, String cpf, String age, String address, String cep) {
         this.userName = userName;
         this.password = password;
         this.email = email;
         this.cpf = cpf;
-        this.idade = idade;
-        this.endereco = endereco;
+        this.age = age;
+        this.address = address;
         this.cep = cep;
+    }
+
+
+
+    public Users(String userName , String password) {
+        this.userName = userName;
+        this.password = password;
     }
 
     public void setUserName(String userName) {
@@ -33,12 +43,12 @@ public class Users {
         this.cpf = cpf;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public void setCep(String cep) {
@@ -61,32 +71,17 @@ public class Users {
         return cpf;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getAge() {
+        return age;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getAddress() {
+        return address;
     }
 
     public String getCep() {
         return cep;
     }
-
-    public Users(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
-    }
-
-    private String cpf ;
-
-    private String idade;
-
-    private String endereco;
-
-    private String cep;
-
-
 
 
 }

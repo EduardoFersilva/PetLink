@@ -25,10 +25,15 @@ public class CreateUserServlet  extends HttpServlet {
         String petId = req.getParameter("id");
         String userName = req.getParameter("user-name");
         String password = req.getParameter("user-password");
+        String email = req.getParameter("user-email");
+        String cpf = req.getParameter("user-cpf");
+        String address = req.getParameter("user-address");
+        String age = req.getParameter("user-age");
+        String cep = req.getParameter("user-cep");
 
-
-        Users users = new Users(userName,password);
+        Users users = new Users(userName,password,email,cpf,age,address,cep);
         new UserDao().createUser(users);
+
 
         req.getRequestDispatcher("user.jsp").forward(req,resp);
 
