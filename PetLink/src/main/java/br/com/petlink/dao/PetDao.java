@@ -15,7 +15,7 @@ public class PetDao {
 
     public void createPet(Pet pet) {
 
-        String SQL = "INSERT INTO PET (NAME) VALUES (?)";
+        String SQL = "INSERT INTO PET (NAME,TYPE,BREED,SIZE,GENDER,AGE,DESCRIPTION) VALUES (?, ? , ? , ? , ? , ? , ? )";
 
         try {
 
@@ -24,6 +24,17 @@ public class PetDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, pet.getName());
+            preparedStatement.setString(2,pet.getTipo());
+            preparedStatement.setString(3,pet.getbreed());
+            preparedStatement.setString(4,pet.getPorte());
+            preparedStatement.setString(5,pet.getSexo());
+            preparedStatement.setString(6,pet.getIdade());
+            preparedStatement.setString(7,pet.getdescription());
+
+
+
+
+
             preparedStatement.execute();
 
             System.out.println("success in insert pet");

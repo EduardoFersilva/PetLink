@@ -23,13 +23,24 @@ public class CreatePetServlet  extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String petId = request.getParameter("id");
-        String petName = request.getParameter("pet-name");
+        String id = request.getParameter("id");
+        String name = request.getParameter("pet-name");
+        String tipo = request.getParameter("pet-tipo");
+        String breed = request.getParameter("pet-breed");
+        String porte = request.getParameter("pet-porte");
+        String sexo = request.getParameter("pet-sexo");
+        String idade = request.getParameter("pet-idade");
+        String description = request.getParameter("pet-description");
 
-       Pet pet = new Pet(petId,petName);
+
+
+
+
+
+        Pet pet = new Pet(id,name,tipo,breed,porte,sexo,idade,description);
        PetDao petDao = new PetDao();
 
-        if (petId.isBlank()) {
+        if (id.isBlank()) {
             petDao.createPet(pet);
         } else {
             petDao.updatePet(pet);
