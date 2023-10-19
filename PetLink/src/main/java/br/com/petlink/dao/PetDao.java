@@ -15,7 +15,7 @@ public class PetDao {
 
     public void createPet(Pet pet) {
 
-        String SQL = "INSERT INTO PET (NAME,TYPE,BREED,SIZE,GENDER,AGE,DESCRIPTION) VALUES (?, ? , ? , ? , ? , ? , ? )";
+        String SQL = "INSERT INTO PET (NAME,TYPE,BREED,SIZE,GENDER,AGE,DESCRIPTION,IMAGE) VALUES (?, ? , ? , ? , ? , ? , ? , ?)";
 
         try {
 
@@ -30,10 +30,7 @@ public class PetDao {
             preparedStatement.setString(5,pet.getSexo());
             preparedStatement.setString(6,pet.getIdade());
             preparedStatement.setString(7,pet.getdescription());
-
-
-
-
+            preparedStatement.setString(8,pet.getImage());
 
             preparedStatement.execute();
 
@@ -66,8 +63,9 @@ public class PetDao {
 
                 String petId = resultSet.getString("id");
                 String petName = resultSet.getString("name");
+                String petImage = resultSet.getString("image");
 
-                Pet pet = new Pet(petId,petName);
+                Pet pet = new Pet(petId,petName,petImage);
 
                 pets.add(pet);
 
@@ -107,7 +105,7 @@ public class PetDao {
 }
     public void updatePet(Pet pet) {
 
-        String SQL = " UPDATE PET  SET NAME = ? WHERE ID = ?" ;
+        String SQL = " UPDATE PET  SET NAME = ?, IMAGE = ? WHERE ID = ?" ;
         try {
 
             Connection connection = ConnectionPoolConfig.getConnection();
@@ -116,7 +114,11 @@ public class PetDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, pet.getName());
-            preparedStatement.setString(2, pet.getId());
+            preparedStatement.setString(2, pet.getImage());
+            preparedStatement.setString(3, pet.getId());
+
+
+
             preparedStatement.execute();
             System.out.println("success in insert pet");
             connection.close();
