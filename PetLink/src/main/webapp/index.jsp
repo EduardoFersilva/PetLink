@@ -1,4 +1,8 @@
 <html>
+<head>
+    <script src="/script.js"></script>
+    <tittle>Home</tittle>
+</head>
 <body>
 <h2>Create Pet</h2>
 
