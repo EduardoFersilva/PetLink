@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <title>user</title>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="user.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+        <script src="/index.js"></script>
+    </head>
 
 <body>
-<form action="/user" method="post">
+    <header>
+        <img src="/images/logo.png" alt="logo" onclick="redirectHome()">
 
-    <label>User Name</label>
-    <input type="text" name="user-name" id="user-name" value="${param.name}">
-    <input type="hidden" name="id" id="id" value="${param.id}">
+        <div class="buttons">
+            <button id="btnLogin"  onclick="redirectLogin()">Login</button>
+            <button id="btnCadastro"  onclick="redirectUser()">Cadastrar-se</button>
+        </div>
+    </header>
+<main>
+    <div class="cont">
+        <form class="divForm" action="/user" method="post">
 
-    <br>
+            <h1>Cadastre-se</h1>
 
-    <label>Password</label>
-    <input type="text" name="user-password" id="user-password" value="${param.password}">
+                <div>
+                    <input type="text" id="user-name" placeholder="Username" name="user-name" class="input" value="${param.name}">
+                    <input type="hidden" name="id" id="id" value="${param.id}">
 
-    <br>
+                    <input type="password" id="user-password" placeholder="Password" name="user-password" class="input" value="${param.password}">
+                </div>
 
-    <label>email</label>
-    <input type="text" name="user-email" id="user-email" value="${param.email}">
+                <div>
+                    <input type="email" id="user-email" placeholder="E-mail" name="user-email" class="input" value="${param.email}">
 
-    <br>
+                    <input type="text" id="user-cpf" placeholder="CPF" name="user-cpf" class="input" value="${param.cpf}">
 
-    <label>cpf</label>
-    <input type="text" name="user-cpf" id="user-cpf" value="${param.cpf}">
-    <br>
-    <label>idade</label>
-    <input type="text" name="user-age" id="user-age" value="${param.age}">
-    <br>
-    <label>endereco</label>
-    <input type="text" name="user-address" id="user-address" value="${param.address}">
+                    <input type="date" id="user-age" placeholder="CPF" name="user-age" class="input" value="${param.age}">
+                </div>
 
-    <br>
-    <label>cep</label>
-    <input type="text" name="user-cep" id="user-cep" value="${param.cep}">
+                <div>
+                    <input type="text" id="user-address" placeholder="Endereco" name="user-address" class="input address" value="${param.address}">
 
-    <br>
+                    <input type="text" id="user-cep" placeholder="Cep" name="user-cep" class="input" value="${param.cep}">
+                </div>
 
-
-
-    <button type="submit">Register</button>
-</form>
+                <button type="submit">Register</button>
+        </form>
+        <img src="/images/a.png" alt="">
+    </div>
+</main>
 </body>
 </html>

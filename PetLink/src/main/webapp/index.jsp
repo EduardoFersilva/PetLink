@@ -1,11 +1,147 @@
 <html>
 <head>
-    <script src="/script.js"></script>
-    <tittle>Home</tittle>
+    <link rel="stylesheet" href="index.css">
+    <script src="/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<h2>Create Pet</h2>
+    <header>
+        <img src="/images/logo.png" alt="logo" onclick="redirectHome()">
 
+        <div class="buttons">
+            <button id="btnLogin"  onclick="redirectLogin()">Login</button>
+            <button id="btnCadastro"  onclick="redirectUser()">Cadastrar-se</button>
+        </div>
+    </header>
+    <main>
+        <div class="contCard">
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/dog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/images/doog.png" alt="">
+                </div>
+                <div class="infos">
+                    <h1>Nome: Calebreso</h1>
+                    <p>Idade: 3 anos</p>
+                    <p>Sexo: Masculino</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- 
 <form action="/create-pet" method="post" enctype="multipart/form-data">
     <div>
         <label>Pet Name</label>
@@ -45,6 +181,6 @@
     <button type="submit">Save</button>
 
 </form>
-
+-->
 </body>
 </html>

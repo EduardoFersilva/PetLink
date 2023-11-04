@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<form action="/login" method="post">
-    <span>${requestScope.message}</span>
-    <br>
+<main>
+    <form class="divForm" action="/login" method="post">
+        <div class="head">Login</div>
+        <div class="bodyForm">
+            <span>${requestScope.message}</span>
 
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username">
+                <input type="text" id="username" placeholder="Username" name="username" class="input">
 
-    <br>
+                <input type="password" id="password" placeholder="Password" name="password" class="input">
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-
-
-     <button type="submit">Login</button>
-</form>
+                <button type="submit">Login</button>
+        </div>
+    </form>
+</main>
 </body>
 </html>

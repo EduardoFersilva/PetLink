@@ -1,0 +1,84 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.divForm{
+    min-height: 300px;
+    width: 300px;
+    border-radius: 15px;
+}
+.divForm .head{
+    background: #156BA9;
+    height: 50px;
+    width: 100%;
+    border-radius: 15px 15px 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Racing Sans One', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    border: 3px solid black;
+}
+.divForm .bodyForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    width: inherit;
+    border: 3px solid black;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    background: #D7BA54;
+}
+.input {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+    margin: 15px 0;
+}
+.input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+.input:focus {
+    border: 2px solid var(--input-focus);
+}
+button {
+    background: #156BA9;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    margin-top: 20px;
+}
+button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+span{
+    font-size: 20px;
+    color: red;
+}
