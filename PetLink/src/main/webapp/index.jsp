@@ -16,11 +16,17 @@
             <button id="btnCadastro"  onclick="redirectUser()">Cadastrar-se</button>
         </div>
     </header>
-    <main>
+ 
+    <div class="banner">
+        <h1>A plataforma que conecta voce ao seu novo PET</h1>
+        <img src="/images/imgBanner.png" alt="">
+    </div>
+
+    <div class="cont">
         <div class="contCard">
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -30,7 +36,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -40,7 +46,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -50,7 +56,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -60,7 +66,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -70,7 +76,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -80,7 +86,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -90,7 +96,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -100,7 +106,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -110,7 +116,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -120,7 +126,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/dog.png" alt="">
+                    <img src="/images/dog1.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -130,7 +136,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="/images/doog.png" alt="">
+                    <img src="/images/dog2.png" alt="">
                 </div>
                 <div class="infos">
                     <h1>Nome: Calebreso</h1>
@@ -139,9 +145,13 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+<!--
+    <div class="footer">
 
-<!-- 
+    </div>
+
+
 <form action="/create-pet" method="post" enctype="multipart/form-data">
     <div>
         <label>Pet Name</label>

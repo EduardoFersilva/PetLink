@@ -47,7 +47,7 @@
 
                 <button type="submit">Register</button>
         </form>
-        <img src="/images/a.png" alt="">
+        <img src="/images/imgCadastro.png" alt="">
     </div>
 </main>
 </body>
