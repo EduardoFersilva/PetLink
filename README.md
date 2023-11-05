@@ -19,21 +19,21 @@ PROTOTIPAÇÃO INICIAL ENTIDADE-ATRIBUTO DB
 
 DESIGN INICIAL (PROTOTIPO)
 <br>
-![telaInicial](PetLink/images/imagem_2023-09-13_210524947.png)
+![telaInicial](/images/imagem_2023-09-13_210524947.png)
 
 <br>
 
-![loginOng](PetLink/images/imagem_2023-09-13_210546636.png)
+![loginOng](/images/imagem_2023-09-13_210546636.png)
 
 <br>
 
-![cadastroPetlink](PetLink/images/imagem_2023-09-13_210559466.png)
+![cadastroPetlink](/images/imagem_2023-09-13_210559466.png)
 <br>
 
-![sidebar](PetLink/images/imagem_2023-09-13_210610180.png)
+![sidebar](/images/imagem_2023-09-13_210610180.png)
 <br>
 
-![feedAnimais](PetLink/images/imagem_2023-09-13_210722087.png)
+![feedAnimais](/images/imagem_2023-09-13_210722087.png)
 
 
 >>>>>>> 7a56f0eeb666110927ecd49330b8c5ae5fe5919d
