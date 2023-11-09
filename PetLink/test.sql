@@ -29,12 +29,12 @@ CREATE TABLE PET (
 
 CREATE TABLE ONG (
                      ID INT AUTO_INCREMENT PRIMARY KEY,
-                     NAMEONG VARCHAR(255),
+                     NAME VARCHAR(255),
                      CNAE VARCHAR(255),
-                     EMAILONG VARCHAR(255),
-                     PHONEONG VARCHAR(255),
-                     PASSWORDONG VARCHAR(255),
-                     ADDRESSONG VARCHAR(255),
-                     CEPONG VARCHAR(255),
+                     EMAIL VARCHAR(255),
+                     PHONE VARCHAR(255),
+                     PASSWORD VARCHAR(255),
+                     ADDRESS VARCHAR(255),
+                     CEP VARCHAR(255)
 
 );

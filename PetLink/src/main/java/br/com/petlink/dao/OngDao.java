@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 public class OngDao {
     public void createOng(Ong ong) {
 
-        String SQL = "INSERT INTO ONG (NAMEONG, CNAE, EMAILONG, PHONEONG, PASSWORDONG, ADDRESSONG, CEPONG) VALUES (?, ? , ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO ONG (NAME, CNAE, EMAIL, PHONE, PASSWORD, ADDRESS, CEP) VALUES (?, ? , ?, ?, ?, ?, ?)";
 
         try {
 
@@ -18,7 +18,7 @@ public class OngDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, ong.getNameOng());
-            preparedStatement.setString(2, ong.getCNAE());
+            preparedStatement.setString(2, ong.getCnae());
             preparedStatement.setString(3, ong.getEmailOng());
             preparedStatement.setString(4, ong.getPhoneOng());
             preparedStatement.setString(5, ong.getPasswordOng());
