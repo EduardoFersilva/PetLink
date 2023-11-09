@@ -1,23 +1,25 @@
 package br.com.petlink.model;
 
 public class Ong {
-    private int idOng;
+
     private String nameOng;
-    private String CNAE;
+    private String cnae;
     private String emailOng;
     private String phoneOng;
     private String passwordOng;
     private String addressOng;
     private String cepOng;
 
+    public Ong(String nameOng, String cnae, String emailOng, String phoneOng,
+               String passwordOng, String addressOng, String cepOng) {
 
-
-    public int getIdOng() {
-        return idOng;
-    }
-
-    public void setIdOng(int idOng) {
-        this.idOng = idOng;
+        this.nameOng = nameOng;
+        this.cnae = cnae;
+        this.emailOng = emailOng;
+        this.phoneOng = phoneOng;
+        this.passwordOng = passwordOng;
+        this.addressOng = addressOng;
+        this.cepOng = cepOng;
     }
 
     public String getNameOng() {
@@ -28,12 +30,12 @@ public class Ong {
         this.nameOng = nameOng;
     }
 
-    public String getCNAE() {
-        return CNAE;
+    public String getCnae() {
+        return cnae;
     }
 
-    public void setCNAE(String CNAE) {
-        this.CNAE = CNAE;
+    public void setCnae(String cnae) {
+        this.cnae = cnae;
     }
 
     public String getEmailOng() {
