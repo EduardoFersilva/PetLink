@@ -17,7 +17,7 @@ header img{
 }
 header button {
     background: #D7BA54;
-    font-weight: 900;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     padding: 0.6em 1.3em;
     font-size: 14px;
@@ -25,13 +25,16 @@ header button {
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     cursor: pointer;
-    margin: 0 10px ;
-    width: 125px;
+    margin: 0 5px ;
     height: 45px;
 }
 header button:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
+}
+header button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
 }
 main{
     background: #D7BA54;
@@ -45,9 +48,7 @@ main .cont{
     display: flex;
     justify-content: center;
     align-items: end;
-}
-main img{
-    margin-left: 100px;
+    padding: 0 20px;
 }
 main .cont .divForm{
     display: flex;
@@ -87,27 +88,52 @@ main .cont .divForm h1{
 .address{
     width: 440px;
 }
-button {
+.btnRegister {
     background: #156BA9;
     padding: 0.6em 1.3em;
     font-weight: 900;
     font-size: 18px;
-    border: 3px solid black;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     max-height: 100px;
     max-width: 200px;
     cursor: pointer;
 }
-button:hover {
+.btnRegister:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.15em 0.15em;
 }
-button:active {
+.btnRegister:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
 }
 span{
     font-size: 20px;
     color: red;
+}
+
+@media (max-width: 1190px) {
+    .cont{
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+    }
+    main img{
+        margin-bottom: 100px;
+        order: -1
+    }
+}
+@media (max-width: 768px) {
+    .cont{
+        flex-direction: column;
+        align-items: center;
+    }
+    main img{
+        margin-bottom: 100px;
+        order: -1
+    }
+    main{
+        padding-top: 100px;
+    }
 }

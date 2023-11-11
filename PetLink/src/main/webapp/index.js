@@ -7,4 +7,3 @@ function redirectLogin() {
 function redirectUser() {
     window.location.href = '/user';
 }
-

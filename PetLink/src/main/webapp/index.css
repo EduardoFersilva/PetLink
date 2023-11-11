@@ -10,6 +10,7 @@ header{
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    z-index: 10;
 }
 header img{
     height: 75px;
@@ -17,7 +18,7 @@ header img{
 }
 header button {
     background: #D7BA54;
-    font-weight: 900;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     padding: 0.6em 1.3em;
     font-size: 14px;
@@ -25,13 +26,16 @@ header button {
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     cursor: pointer;
-    margin: 0 10px ;
-    width: 125px;
+    margin: 0 5px ;
     height: 45px;
 }
 header button:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
+}
+header button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
 }
 .banner{
     width: 100%;
@@ -42,25 +46,32 @@ header button:active {
     align-items: end;
 }
 .banner img{
-    height: 450px;
+    height: 470px;
     width: 600px;
 }
-.banner h1{
+.banner .imgCat{
+    height: 120px;
     width: 300px;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.banner h1{
+    max-width: 600px;
     text-align: center;
     font-family: 'Racing Sans One', sans-serif;
-    color: #000000da;
-    margin: 0 150px 100px 150px;
+    font-size: 50px;
+    color: #000000ee;
+    margin: 0 0 120px 0;
 }
 .cont{
     background: #D9D9D9;
+    padding-top: 70px;
 }
-.contCard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.contCard .card{
+.card{
     width: 250px;
     height: 350px;
     background: #184768;
@@ -72,34 +83,37 @@ header button:active {
     align-items: center;
     margin: 20px;
 }
-.contCard .card img{
+.card img{
     height: 180px;
 
 }
-.contCard .card h1{
+.card h1{
     color: #000000e8;
     font-size: 20px;
     font-family: 'Racing Sans One', sans-serif;
     margin: 10px 0;
 }
-.contCard .card p {
+.card p {
     color: #fff;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
-.contCard .card .image{
+.card .image{
     display: flex;
     justify-content: center;
     align-items: end;
     width: 100%;
     height: 100%;
 }
-.contCard .card .infos{
+.card .infos{
     width: 100%;
     text-align: center;
     border-top: 3px solid black;
     padding: 20px 0;
     background: #156BA9;
+}
+li{
+    width: 300px !important;
 }
 .footer{
     background: #156BA9;
@@ -107,17 +121,12 @@ header button:active {
     width: 100%;
 }
 
-@media (max-width: 1200px) {
-    .banner h1{
-        margin: 0 50px 100px 50px;
-    }
-}
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
     .banner{
         flex-direction: column;
-        align-items: center;
         justify-content: end;
-        padding-top: 100px;
+        align-items: center;
+        padding-top: 150px;
     }
     .banner h1{
         margin: 0;
@@ -128,14 +137,6 @@ header button:active {
         width: 400px;
         height: 300px;
     }
-    .banner{
-        padding-top: 0;
-        min-height: 470px;
-    }
-    .banner h1{
-        font-size: 25px;
-        margin-bottom: 40px;
-    }
 }
 @media (max-width: 500px) {
     header{
@@ -144,22 +145,26 @@ header button:active {
     header .buttons {
         padding-right: 10px;
     }
-    header button{
-        font-size: 12px;
-        margin: 0px;
-        width: 108px;
-    }
     header img{
         margin-left: 5px;
     }
+    .banner h1{
+        padding: 0 25px;
+        font-size: 20px;
+    }
     .banner img{
-        width: 300px;
-        height: 225px;
+        width: 315px;
+        height: 240px;
+    }
+    .banner{
+        padding-top: 0px;
+    }
+    .intro{
+        margin-bottom: 20px
     }
 }
 @media (max-width: 370px) {
     header button{
-        width: 85px;
         margin: 0 2px;
     }
     header .buttons{

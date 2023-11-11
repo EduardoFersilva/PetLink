@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
     <header>
@@ -18,134 +19,109 @@
     </header>
  
     <div class="banner">
-        <h1>A plataforma que conecta voce ao seu novo PET</h1>
+        <div class="intro">
+            <img src="/images/cat.png" alt="" class="imgCat">
+            <h1>A plataforma que conecta voce ao seu novo PET</h1>
+        </div>
         <img src="/images/imgBanner.png" alt="">
     </div>
 
     <div class="cont">
-        <div class="contCard">
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog1.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/images/dog2.png" alt="">
-                </div>
-                <div class="infos">
-                    <h1>Nome: Calebreso</h1>
-                    <p>Idade: 3 anos</p>
-                    <p>Sexo: Masculino</p>
-                </div>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list" style="height: 500px;">
+
+                    <li class="splide__slide">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/dog2.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <h1>Nome: Calebreso</h1>
+                            <p>Idade: 3 anos</p>
+                            <p>Sexo: Masculino</p>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="card">
+                            <div class="image">
+                                <img src="/images/dog2.png" alt="">
+                            </div>
+                            <div class="infos">
+                                <h1>Nome: Calebreso</h1>
+                                <p>Idade: 3 anos</p>
+                                <p>Sexo: Masculino</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="/images/dog2.png" alt="">
+                                </div>
+                                <div class="infos">
+                                    <h1>Nome: Calebreso</h1>
+                                    <p>Idade: 3 anos</p>
+                                    <p>Sexo: Masculino</p>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="/images/dog2.png" alt="">
+                                    </div>
+                                    <div class="infos">
+                                        <h1>Nome: Calebreso</h1>
+                                        <p>Idade: 3 anos</p>
+                                        <p>Sexo: Masculino</p>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img src="/images/dog2.png" alt="">
+                                        </div>
+                                        <div class="infos">
+                                            <h1>Nome: Calebreso</h1>
+                                            <p>Idade: 3 anos</p>
+                                            <p>Sexo: Masculino</p>
+                                        </div>
+                                    </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="card">
+                                            <div class="image">
+                                                <img src="/images/dog2.png" alt="">
+                                            </div>
+                                            <div class="infos">
+                                                <h1>Nome: Calebreso</h1>
+                                                <p>Idade: 3 anos</p>
+                                                <p>Sexo: Masculino</p>
+                                            </div>
+                                        </div>
+                                        </li>
+
+                </ul>
             </div>
         </div>
+        
     </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+        });
+
+        splide.mount();
+    </script>
 <!--
     <div class="footer">
 

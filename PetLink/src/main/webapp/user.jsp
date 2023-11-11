@@ -45,7 +45,7 @@
                     <input type="text" id="user-cep" placeholder="Cep" name="user-cep" class="input" value="${param.cep}">
                 </div>
 
-                <button type="submit">Register</button>
+                <button class="btnRegister" type="submit">Register</button>
         </form>
         <img src="/images/imgCadastro.png" alt="">
     </div>
