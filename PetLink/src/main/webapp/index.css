@@ -69,7 +69,11 @@ header button:hover {
 }
 .cont{
     background: #D9D9D9;
-    padding-top: 70px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     width: 250px;
@@ -120,8 +124,23 @@ li{
     height: 200px;
     width: 100%;
 }
-
+.splide{
+    width: 1800px;
+}
+.splide button{
+    position: absolute;
+    top: 220px;
+    margin: 0 -25px;
+}
+@media (max-width: 1840px) {
+    .splide{
+        width: 1200px;
+    }
+}
 @media (max-width: 1250px) {
+    .splide{
+        width: 900px;
+    }
     .banner{
         flex-direction: column;
         justify-content: end;
@@ -130,6 +149,19 @@ li{
     }
     .banner h1{
         margin: 0;
+    }
+}
+@media (max-width: 920px) {
+    .splide{
+        width: 600px;
+    }
+}
+@media (max-width: 750px) {
+    .splide button{
+        display: none;
+    }
+    li{
+        margin-left: 150px !important;
     }
 }
 @media (max-width: 700px) {

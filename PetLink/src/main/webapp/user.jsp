@@ -24,22 +24,25 @@
 
             <h1>Cadastre-se</h1>
 
-                <div>
+                <div class="contName">
                     <input type="text" id="user-name" placeholder="Username" name="user-name" class="input" value="${param.name}">
                     <input type="hidden" name="id" id="id" value="${param.id}">
 
                     <input type="password" id="user-password" placeholder="Password" name="user-password" class="input" value="${param.password}">
                 </div>
 
-                <div>
-                    <input type="email" id="user-email" placeholder="E-mail" name="user-email" class="input" value="${param.email}">
+                <div class="contEmail">
+                    <div class="contCpf">
+                        <input type="email" id="user-email" placeholder="E-mail" name="user-email" class="input" value="${param.email}">
 
-                    <input type="text" id="user-cpf" placeholder="CPF" name="user-cpf" class="input" value="${param.cpf}">
-
-                    <input type="date" id="user-age" placeholder="CPF" name="user-age" class="input" value="${param.age}">
+                        <input type="text" id="user-cpf" placeholder="CPF" name="user-cpf" class="input" value="${param.cpf}">
+                    </div>
+                    <div class="date">
+                        <input type="date" id="user-age"  name="user-age" class="input" value="${param.age}">
+                    </div>
                 </div>
 
-                <div>
+                <div class="contEndereco">
                     <input type="text" id="user-address" placeholder="Endereco" name="user-address" class="input address" value="${param.address}">
 
                     <input type="text" id="user-cep" placeholder="Cep" name="user-cep" class="input" value="${param.cep}">

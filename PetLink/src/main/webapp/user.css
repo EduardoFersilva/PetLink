@@ -54,6 +54,7 @@ main .cont .divForm{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 30px
 }
 main .cont .divForm h1{
     font-family: 'Racing Sans One', sans-serif;
@@ -99,6 +100,7 @@ main .cont .divForm h1{
     max-height: 100px;
     max-width: 200px;
     cursor: pointer;
+    margin-top: 10px;
 }
 .btnRegister:hover {
     transform: translate(-0.05em, -0.05em);
@@ -112,6 +114,22 @@ span{
     font-size: 20px;
     color: red;
 }
+.contEmail{
+    display: flex;
+}
+
+@media (max-width: 1420px) {
+    .address{
+        width: 200px !important;
+    }
+    .btnRegister{
+        order: 2;
+    }
+    .contEmail{
+        order: 1;
+        display: block;
+    }
+}
 
 @media (max-width: 1190px) {
     .cont{
@@ -123,6 +141,21 @@ span{
         margin-bottom: 100px;
         order: -1
     }
+    .date{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .date input{
+        margin: 15px 0 25px;
+    }
+    .divForm{
+        align-items: center;
+        margin-right: 0 !important;
+    }
+    #user-password,#user-cep,#user-cpf{
+        margin: 15px 0 15px 0;
+    }
 }
 @media (max-width: 768px) {
     .cont{
@@ -130,10 +163,60 @@ span{
         align-items: center;
     }
     main img{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         order: -1
     }
     main{
         padding-top: 100px;
+    }
+}
+@media (max-width: 700px) {
+    main img{
+        height: 250px;
+    }
+    main{
+        padding-top: 150px;
+        height: 100%;
+    }
+    .divForm{
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .contName{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contName input{
+        margin: 15px 0 15px 0;
+    }
+    .contEndereco{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contEndereco input{
+        margin: 15px 0 15px 0;
+    }
+    .contCpf{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contCpf input{
+        margin: 15px 0 15px 0;
+    }
+}
+@media (max-width: 430px) {
+    main img{
+        height: 220px;
+    }
+}
+@media (max-width: 360px) {
+    main img{
+        height: 190px;
     }
 }
