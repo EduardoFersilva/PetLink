@@ -32,7 +32,7 @@
                             <input type="hidden" id="id" name="id" value="${pet.id}">
                             <button type="submit">Delete</button>
                             <span> | </span>
-                            <a href="index.jsp?id=${pet.id}&name=${pet.name}">Update</a>
+                            <a href="petz.jsp?id=${pet.id}&name=${pet.name}&breed=${pet.breed}">Update</a>
                         </form>
                     </c:if>
                 </td>

@@ -105,30 +105,26 @@ public class PetDao {
 }
     public void updatePet(Pet pet) {
 
-        String SQL = " UPDATE PET  SET NAME = ?, IMAGE = ? WHERE ID = ?" ;
+        String SQL = "UPDATE PET SET NAME  = ?,BREED = ? WHERE ID = ?";
         try {
-
             Connection connection = ConnectionPoolConfig.getConnection();
-
-
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, pet.getName());
-            preparedStatement.setString(2, pet.getImage());
+            preparedStatement.setString(2, pet.getbreed());
+
             preparedStatement.setString(3, pet.getId());
 
+            preparedStatement.executeUpdate();
 
-
-            preparedStatement.execute();
-            System.out.println("success in insert pet");
+            System.out.println("Success in updating pet");
             connection.close();
-
         } catch (Exception e) {
-            System.out.println("fail in database connection");
+            System.out.println("Failed in database connection");
             System.out.println("Error: " + e.getMessage());
-
         }
     }
+
 
 }
 
