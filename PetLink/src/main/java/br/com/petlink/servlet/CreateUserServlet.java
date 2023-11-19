@@ -21,8 +21,6 @@ public class CreateUserServlet  extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        String petId = req.getParameter("id");
         String userName = req.getParameter("user-name");
         String password = req.getParameter("user-password");
         String email = req.getParameter("user-email");
@@ -30,12 +28,12 @@ public class CreateUserServlet  extends HttpServlet {
         String address = req.getParameter("user-address");
         String age = req.getParameter("user-age");
         String cep = req.getParameter("user-cep");
-
-        Users users = new Users(userName,password,email,cpf,age,address,cep);
+    
+        Users users = new Users(userName, password, email, cpf, age, address, cep);
         new UserDao().createUser(users);
-
-
-        req.getRequestDispatcher("user.jsp").forward(req,resp);
-
+    
+        // Após criar o usuário com sucesso, redirecionar para a página de login
+        resp.sendRedirect(req.getContextPath() + "/login");
     }
+    
 }

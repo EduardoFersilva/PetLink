@@ -1,3 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background: #156BA9;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+header img{
+    height: 75px;
+    cursor: pointer;
+}
+header button {
+    background: #D7BA54;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.6em 1.3em;
+    font-size: 14px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    margin: 0 5px ;
+    height: 45px;
+}
+header button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+header button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
 main{
     display: flex;
     justify-content: center;
