@@ -28,18 +28,55 @@
                 </div>
                 <div class="info-pet">
                     <!--COLOCAR AS INFORMACOES DE FORMA DINAMICA COM JS-->
-                    <h1>PET</h1>
-                    <h2>Raça: ${pet.breed}</h2><br>                   
-                    <h2>Idade: ${pet.idade}</h2><br>
-                    <h2>Porte: ${pet.porte}</h2><br>    
-                    <h2>Nome: ${pet.name}</h2><br>
-                    
-                    <h1>ONG</h1>
-                    <h2>Nome: Ong dos Dog</h2><br>
-                    <h2>Endereço: RUA dos dOGS, 76</h2><br>
-                    <h2>Contato: 727393938739</h2><br>
+                    <h1 class="nome">${pet.name}</h1>
 
-                    <button class="email-btn">EMAIL</button> <!--COLOCAR O DIRECIONAMENTO PARA EMAIL (CASO NECESSÁRIO ESSA FUNCIONALIDADE). LEMBRAR DE MEXER NA POSICAO DO BOTAO-->
+                    <div class="InfoContainer">
+                        <div class="containerSessao">
+                            <p class="sessaoTitulo">Raça</p>
+                            <p class="textInfo"> ${pet.breed}</p class="textInfo">                   
+                        </div>
+                        <div class="containerSessao">
+                            <p class="sessaoTitulo">Porte</p>
+                            <p class="textInfo">Porte: ${pet.porte}</p class="textInfo">    
+                        </div>
+                        <div class="containerSessao">
+                            <p class="sessaoTitulo">Idade</p>
+                            <p class="textInfo">${pet.idade}</p class="textInfo">
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <h1 class="ongNome">Sobre a Ong</h1>
+                        <div class="InfoContainer">
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Nome</p>
+                                <p class="textInfo">Ong dos Dog</p class="textInfo">
+                            </div>
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Endereço</p>
+                                <p class="textInfo"> RUA dos dOGS, 76</p class="textInfo">
+                            </div>
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Contato</p>
+                                <p class="textInfo">727393938739</p class="textInfo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <button class="email-btn">EMAIL</button> COLOCAR O DIRECIONAMENTO PARA EMAIL (CASO NECESSÁRIO ESSA FUNCIONALIDADE). LEMBRAR DE MEXER NA POSICAO DO BOTAO -->
                 </div>
         </main>
+        <div class="footer">
+            <img src="/images/logo.png" alt="logo" onclick="redirectHome()">
+            <h1> &copyCopyright</h1>
+    
+            <p class="textInfo" style="margin: 30px 0 10px 0;">Todos os direitos reservados.</p class="textInfo">
+            <p>Eduardo Fernandes</p>
+            <p>Victor Laguna</p>
+            <p>Felipe Malcom</p>
+            <p>Michael Evangelista</p>
+            <p>Rafael Ribeiro</p>
+            
+        </div>
     </body>
