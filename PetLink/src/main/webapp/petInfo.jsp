@@ -37,7 +37,7 @@
                         </div>
                         <div class="containerSessao">
                             <p class="sessaoTitulo">Porte</p>
-                            <p class="textInfo">Porte: ${pet.porte}</p class="textInfo">    
+                            <p class="textInfo">${pet.porte}</p class="textInfo">
                         </div>
                         <div class="containerSessao">
                             <p class="sessaoTitulo">Idade</p>

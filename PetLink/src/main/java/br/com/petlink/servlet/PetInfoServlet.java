@@ -20,7 +20,7 @@ public class PetInfoServlet extends HttpServlet{
         req.setCharacterEncoding("UTF-8");
 //        String petId =  req.getParameter("id");
 
-        Pet pet = new PetDao().petInfo("1");
+        Pet pet = new PetDao().petInfo("3");
         System.out.println("PET: " + pet.getName());
 
         req.setAttribute("pet",pet);

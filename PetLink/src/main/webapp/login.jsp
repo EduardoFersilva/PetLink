@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/index.js"></script>
     <link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,6 @@
         <img src="/images/logo.png" alt="logo" onclick="redirectHome()">
 
         <div class="buttons">
-            <button id="btnLogin"  onclick="redirectLogin()">Login</button>
             <button id="btnCadastro"  onclick="redirectUser()">Cadastrar-se</button>
         </div>
     </header>
