@@ -48,10 +48,20 @@
                 </ul>
             </div>
         </div>
-        
     </div>
 
+    <div class="footer">
+        <img src="/images/logo.png" alt="logo" onclick="redirectHome()">
+        <h1> &copyCopyright</h1>
 
+        <h2 style="margin: 30px 0 10px 0;">Todos os direitos reservados.</h2>
+        <p>Eduardo Fernandes</p>
+        <p>Victor Laguna</p>
+        <p>Felipe Malcom</p>
+        <p>Michael Evangelista</p>
+        <p>Rafael Ribeiro</p>
+        
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
@@ -64,8 +74,6 @@
         splide.mount();
     </script>
 
-    <div class="footer">
 
-    </div>
 </body>
 </html>
