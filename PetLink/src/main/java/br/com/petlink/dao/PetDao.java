@@ -82,7 +82,50 @@ public class PetDao {
 
                 return Collections.emptyList();
 
-        } }
+        }
+
+    }
+
+    public Pet petInfo(String id){
+        String SQL = "SELECT * FROM PET WHERE ID = ?";
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1,id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            System.out.println("Sucess in get pet info");
+            System.out.println(resultSet);
+            if(resultSet.next()){
+                String petId = resultSet.getString("id");
+                String petName = resultSet.getString("name");
+                String petImage = resultSet.getString("image");
+                String petTipo = resultSet.getString("TYPE");
+                String petRaca = resultSet.getString("BREED");
+                String petTamanho = resultSet.getString("SIZE");
+                String petSexo = resultSet.getString("GENDER");
+                String petIdade = resultSet.getString("AGE");
+                String petDescricao = resultSet.getString("DESCRIPTION");
+
+                Pet pet = new Pet(petId,petName,petTipo,petRaca,petTamanho,petSexo,petIdade,petDescricao,petImage);
+                System.out.println(pet.getImage());
+                connection.close();
+
+                return pet;
+            }
+
+            System.out.println("Resultado está vázio \n Resultado: " + resultSet);
+            return new Pet();
+
+
+        } catch (Exception e) {
+            System.out.println("Failed in database connection");
+            System.out.println("Error: " + e.getMessage());
+            return new Pet();
+        }
+    }
     public void deletePetById(String petId) {
 
         String SQL = "DELETE PET WHERE ID = ?";
@@ -100,9 +143,9 @@ public class PetDao {
             connection.close();
         }
         catch (Exception e){
-        System.out.println("fail in database connection");
+            System.out.println("fail in database connection");
+        }
     }
-}
     public void updatePet(Pet pet) {
 
         String SQL = "UPDATE PET SET NAME  = ?,BREED = ? WHERE ID = ?";

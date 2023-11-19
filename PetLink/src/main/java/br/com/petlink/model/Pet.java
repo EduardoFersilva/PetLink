@@ -22,6 +22,8 @@ public class Pet {
 
     private String image;
 
+    public Pet(){}
+
     public Pet(String id, String name, String tipo, String breed, String porte, String sexo, String idade, String description) {
         this.id = id;
         this.name = name;
