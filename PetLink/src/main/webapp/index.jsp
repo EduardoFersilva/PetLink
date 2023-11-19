@@ -1,5 +1,6 @@
 <html>
 <head>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <link rel="stylesheet" href="index.css">
     <script src="/index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
@@ -30,87 +31,27 @@
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list" style="height: 500px;">
-
-                    <li class="splide__slide">
-                    <div class="card">
-                        <div class="image">
-                            <img src="/images/dog2.png" alt="">
-                        </div>
-                        <div class="infos">
-                            <h1>Nome: Calebreso</h1>
-                            <p>Idade: 3 anos</p>
-                            <p>Sexo: Masculino</p>
-                        </div>
-                    </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="card">
-                            <div class="image">
-                                <img src="/images/dog2.png" alt="">
-                            </div>
-                            <div class="infos">
-                                <h1>Nome: Calebreso</h1>
-                                <p>Idade: 3 anos</p>
-                                <p>Sexo: Masculino</p>
-                            </div>
-                        </div>
-                        </li>
+                    <c:forEach var="pet" items="${pets}">
                         <li class="splide__slide">
                             <div class="card">
                                 <div class="image">
-                                    <img src="/images/dog2.png" alt="">
+                                    <img src="${pet.image}" alt="">
                                 </div>
                                 <div class="infos">
-                                    <h1>Nome: Calebreso</h1>
-                                    <p>Idade: 3 anos</p>
-                                    <p>Sexo: Masculino</p>
+                                    <h1>Nome: ${pet.name}</h1>
+                                    <p>Idade: ${pet.idade}</p>
+                                    <p>Sexo: ${pet.sexo}</p>
                                 </div>
                             </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="/images/dog2.png" alt="">
-                                    </div>
-                                    <div class="infos">
-                                        <h1>Nome: Calebreso</h1>
-                                        <p>Idade: 3 anos</p>
-                                        <p>Sexo: Masculino</p>
-                                    </div>
-                                </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="card">
-                                        <div class="image">
-                                            <img src="/images/dog2.png" alt="">
-                                        </div>
-                                        <div class="infos">
-                                            <h1>Nome: Calebreso</h1>
-                                            <p>Idade: 3 anos</p>
-                                            <p>Sexo: Masculino</p>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div class="card">
-                                            <div class="image">
-                                                <img src="/images/dog2.png" alt="">
-                                            </div>
-                                            <div class="infos">
-                                                <h1>Nome: Calebreso</h1>
-                                                <p>Idade: 3 anos</p>
-                                                <p>Sexo: Masculino</p>
-                                            </div>
-                                        </div>
-                                        </li>
-
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>
         
     </div>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
@@ -122,51 +63,9 @@
 
         splide.mount();
     </script>
-<!--
+
     <div class="footer">
 
     </div>
-
-
-<form action="/create-pet" method="post" enctype="multipart/form-data">
-    <div>
-        <label>Pet Name</label>
-        <input type="text" name="pet-name" id="pet-name" value="${param.name}">
-        <input type="hidden" name="id" id="id" value="${param.id}">
-        <br>
-        <label>Tipo</label>
-        <input type="text" name="pet-tipo" id="pet-tipo" value="${param.tipo}">
-        <br>
-
-        <label>Raca</label>
-        <input type="text" name="pet-breed" id="pet-breed" value="${param.breed}">
-        <br>
-
-        <label>Porte</label>
-        <input type="text" name="pet-porte" id="pet-porte" value="${param.porte}">
-        <br>
-
-        <label>Sexo</label>
-        <input type="text" name="pet-sexo" id="pet-sexo" value="${param.sexo}">
-        <br>
-
-        <label>Idade</label>
-        <input type="text" name="pet-idade" id="pet-idade" value="${param.idade}">
-        <br>
-
-        <label>Descricao</label>
-        <input type="text" name="pet-description" id="pet-description" value="${param.description}">
-        <br>
-    </div>
-    <div>
-        <label>Image</label>
-        <input type="file" name="image" id="image">
-    </div>
-    <br>
-
-    <button type="submit">Save</button>
-
-</form>
--->
 </body>
 </html>

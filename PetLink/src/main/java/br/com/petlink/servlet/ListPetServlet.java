@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet({"/find-all-pets","/admin/find-all-pets"})
+@WebServlet({"/index","/admin/find-all-pets"})
 public class ListPetServlet extends HttpServlet {
 
     @Override
@@ -21,6 +21,14 @@ public class ListPetServlet extends HttpServlet {
 
         req.setAttribute("pets",pets);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req,resp);
+        if (req.getSession().getAttribute("loggedUser") != null) {
+
+            req.getRequestDispatcher("/dashboard.jsp").forward(req,resp);
+
+        }else{
+
+            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+
+        }
     }
 }

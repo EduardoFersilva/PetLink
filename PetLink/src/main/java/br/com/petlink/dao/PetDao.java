@@ -64,8 +64,11 @@ public class PetDao {
                 String petId = resultSet.getString("id");
                 String petName = resultSet.getString("name");
                 String petImage = resultSet.getString("image");
+                String petSexo = resultSet.getString("GENDER");
+                String petIdade = resultSet.getString("AGE");
 
-                Pet pet = new Pet(petId,petName,petImage);
+
+                Pet pet = new Pet(petId,petName,petImage,petSexo,petIdade);
 
                 pets.add(pet);
 

@@ -36,10 +36,12 @@ public class Pet {
 
     }
 
-    public Pet(String id, String name, String image) {
+    public Pet(String id, String name, String image, String sexo, String idade) {
         this.id = id;
         this.name = name;
         this.image = image;
+        this.sexo = sexo;
+        this.idade = idade;
     }
 
     public Pet(String id, String name, String tipo, String breed, String porte, String sexo, String idade, String description, String image) {
