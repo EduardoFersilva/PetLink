@@ -41,7 +41,7 @@
 					<hr>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/find-all-pets"><span data-feather="home" class="align-text-bottom"></span> Home </a>
+							<a class="nav-link" aria-current="page" href="/find-all-pets"><span data-feather="home" class="align-text-bottom"></span> Dashboard </a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/create-pet"><span data-feather="file-text" class="align-text-bottom"></span> Novo Pet</a>

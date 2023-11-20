@@ -37,33 +37,39 @@ header button:hover {
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.15em 0.15em;
 }
-
-body{
-    background-color: #D9D9D9;
-    font-family: 'Roboto', sans-serif;
-
-}
-
 main {
+    padding-top: 100px;
+    min-height: 800px;
+    width: 100%;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
-    max-width: 100vw;
-    min-height: 100vh;
-    padding: 0 4rem;
-    padding-top: 20px;
-    gap: 10rem;
-    margin-bottom: 0.5rem;
 }
-
+.ContInfos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+}
+.info-pet{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 500px;
+}
 .img-pet{
-    position: relative;
-    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
 }
 
 .img-pet img{
     object-fit: contain;
+    height:  100%;
     width: 100%;
+    border-radius: 15px !important;
 }
 
 .InfoContainer{
@@ -71,64 +77,68 @@ main {
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 2rem;
 }
-
 .nome{
     color:#156BA9;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
-
-.info-pet{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    height: 100%;
-}
-
-.InfoContainer{
-    padding-bottom: 2rem;
-}
-
 .containerSessao {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
     margin-bottom: .8rem;
+    width: 300px;
 }
-
 .sessaoTitulo{
-    font-size: .8rem;
-    font-weight: bold;
-    color: gray;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 1.7rem !important;
+    color: rgba(110, 110, 110, 0.884)
 }
-
 .ongNome{
-    color: rgba(0, 0, 0, 0.64);
+    color:#156BA9;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
 }
-
-@media (max-width: 1200px) {
-    .InfoContainer{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    main{
+.textInfo{
+    color: rgba(0, 0, 0, 0.801);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.contato{
+    margin-bottom: 0 !important;
+}
+.contList{
+    margin-top: 40px;
+}
+@media (max-width: 1420px) {
+    .ContInfos{
         flex-direction: column;
-        padding-top: 110px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        gap: 1.5rem;
-        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 20px;
     }
-
     .info-pet{
-        width: 100%;
+        margin-top: 50px;
+        order: 2;
     }
-
     .img-pet{
-        width: 100%;
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .InfoContainer{
+        grid-template-columns: repeat(1, auto);
+    }
+    .ContInfos{
+        padding: 0 10px;
+    }
+    .info-pet{
+        margin: 330px 0 50px 0;
+    }
+    .img-pet{
+        height: 270px;
+        margin: 50px 0;
     }
 }

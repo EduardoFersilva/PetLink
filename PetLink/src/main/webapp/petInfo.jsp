@@ -23,49 +23,80 @@
             </div>
         </header>
         <main>
-                <div class="img-pet">
-                    <img src="/images/caramelo.jpg" alt="" class="petImage">
-                </div>
+            <div class="ContInfos">
                 <div class="info-pet">
-                    <!--COLOCAR AS INFORMACOES DE FORMA DINAMICA COM JS-->
-                    <h1 class="nome">${pet.name}</h1>
+                    <div class="contList">
+                        <h1 class="nome">${pet.name}</h1>
+                        <div class="InfoContainer">
 
-                    <div class="InfoContainer">
-                        <div class="containerSessao">
-                            <p class="sessaoTitulo">Raça</p>
-                            <p class="textInfo"> ${pet.breed}</p class="textInfo">                   
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Idade:</p>
+                                <p class="textInfo">${pet.idade}</p class="textInfo">
+                            </div>
+
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Tipo:</p>
+                                <p class="textInfo"> ${pet.tipo}</p class="textInfo">                   
+                            </div>
+
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Sexo:</p>
+                                <p class="textInfo">${pet.sexo}</p class="textInfo">
+                            </div>
+
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Porte:</p>
+                                <p class="textInfo">${pet.porte}</p class="textInfo">
+                            </div>
+
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Ra&ccedila:</p>
+                                <p class="textInfo"> ${pet.breed}</p class="textInfo">                   
+                            </div>
+
+                            <div class="containerSessao">
+                                <p class="sessaoTitulo">Descri&ccedil&atildeo:</p>
+                                <p class="textInfo"> ${pet.description}</p class="textInfo">                   
+                            </div>
+
                         </div>
-                        <div class="containerSessao">
-                            <p class="sessaoTitulo">Porte</p>
-                            <p class="textInfo">${pet.porte}</p class="textInfo">
-                        </div>
-                        <div class="containerSessao">
-                            <p class="sessaoTitulo">Idade</p>
-                            <p class="textInfo">${pet.idade}</p class="textInfo">
-                        </div>
-                        
                     </div>
-                    
-                    <div>
+       
+                    <div class="contList">
                         <h1 class="ongNome">Sobre a Ong</h1>
                         <div class="InfoContainer">
+
                             <div class="containerSessao">
-                                <p class="sessaoTitulo">Nome</p>
+                                <p class="sessaoTitulo">Nome:</p>
                                 <p class="textInfo">Ong dos Dog</p class="textInfo">
                             </div>
+
                             <div class="containerSessao">
-                                <p class="sessaoTitulo">Endereço</p>
-                                <p class="textInfo"> RUA dos dOGS, 76</p class="textInfo">
+                                <p class="sessaoTitulo">Cep:</p>
+                                <p class="textInfo"> 82656-070</p class="textInfo">
                             </div>
-                            <div class="containerSessao">
-                                <p class="sessaoTitulo">Contato</p>
+
+                            <div class="containerSessao contato">
+                                <p class="sessaoTitulo">Contato:</p>
                                 <p class="textInfo">727393938739</p class="textInfo">
                             </div>
+
+                            
+                            <div class="containerSessao contato">
+                                <p class="sessaoTitulo">Endere&ccedilo:</p>
+                                <p class="textInfo"> RUA dos Dogs, 76</p class="textInfo">
+                            </div>
+
                         </div>
                     </div>
-
                     <!-- <button class="email-btn">EMAIL</button> COLOCAR O DIRECIONAMENTO PARA EMAIL (CASO NECESSÁRIO ESSA FUNCIONALIDADE). LEMBRAR DE MEXER NA POSICAO DO BOTAO -->
                 </div>
+
+                <div class="img-pet">
+                    <img src="/img/${pet.image}" class="petImage">
+                </div>
+
+            </div>
         </main>
         <div class="footer">
             <img src="/images/logo.png" alt="logo" onclick="redirectHome()">

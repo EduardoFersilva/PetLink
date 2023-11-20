@@ -18,11 +18,13 @@ public class PetInfoServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-//        String petId =  req.getParameter("id");
 
-        Pet pet = new PetDao().petInfo("3");
+        String petId = req.getParameter("id");
+        Pet pet = new PetDao().petInfo(petId);
+        
+
         System.out.println("PET: " + pet.getName());
-
+        
         req.setAttribute("pet",pet);
 
         req.getRequestDispatcher("petInfo.jsp").forward(req,resp);

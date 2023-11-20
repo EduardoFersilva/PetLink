@@ -80,7 +80,6 @@ header button:hover {
     height: 350px;
     background: #184768;
     border: 3px solid black;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,8 +87,8 @@ header button:hover {
     margin: 20px;
 }
 .card img{
-    height: 180px;
-
+    height: 100%;
+    width: 100%;
 }
 .card h1{
     color: #000000e8;
@@ -111,9 +110,13 @@ header button:hover {
 }
 .card .infos{
     width: 100%;
+    height: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-top: 3px solid black;
-    padding: 20px 0;
     background: #156BA9;
 }
 li{
@@ -155,8 +158,11 @@ li{
 }
 .splide button{
     position: absolute;
-    top: 220px;
-    margin: 0 -25px;
+    top: 200px;
+    margin: 0 -35px;
+}
+.splide__pagination__page{
+    display: none !important;
 }
 @media (max-width: 1840px) {
     .splide{

@@ -42,12 +42,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5);
+    z-index: 1;
 }
 .divForm{
     min-height: 300px;
     width: 300px;
     border-radius: 15px;
+    margin-top: 100px;
 }
 .divForm .head{
     background: #156BA9;

@@ -2,7 +2,7 @@
 <head>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <link rel="stylesheet" href="index.css">
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,16 +33,18 @@
                 <ul class="splide__list" style="height: 500px;">
                     <c:forEach var="pet" items="${pets}">
                         <li class="splide__slide">
-                            <div class="card">
-                                <div class="image">
-                                    <img src="${pet.image}" alt="">
+                            <a href="#" onclick="redirectInfo('${pet.id}')" style="text-decoration: none;">
+                                <div class="card">
+                                    <div class="image">
+                                        <img src="/img/${pet.image}" alt="">
+                                    </div>
+                                    <div class="infos">
+                                        <h1>Nome: ${pet.name}</h1>
+                                        <p>Idade: ${pet.idade}</p>
+                                        <p>Sexo: ${pet.sexo}</p>
+                                    </div>
                                 </div>
-                                <div class="infos">
-                                    <h1>Nome: ${pet.name}</h1>
-                                    <p>Idade: ${pet.idade}</p>
-                                    <p>Sexo: ${pet.sexo}</p>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                     </c:forEach>
                 </ul>
