@@ -15,7 +15,7 @@ public class PetDao {
 
     public void createPet(Pet pet) {
 
-        String SQL = "INSERT INTO PET (NAME,TYPE,BREED,SIZE,GENDER,AGE,DESCRIPTION,IMAGE) VALUES (?, ? , ? , ? , ? , ? , ? , ?)";
+        String SQL = "INSERT INTO PET (NAME,TYPE,BREED,SIZE,GENDER,AGE,DESCRIPTION,IMAGE, IDUSER) VALUES (?, ?, ? , ? , ? , ? , ? , ? , ?)";
 
         try {
 
@@ -31,6 +31,7 @@ public class PetDao {
             preparedStatement.setString(6,pet.getIdade());
             preparedStatement.setString(7,pet.getdescription());
             preparedStatement.setString(8,pet.getImage());
+            preparedStatement.setString(9,pet.getIdUser());
 
             preparedStatement.execute();
 
@@ -41,6 +42,7 @@ public class PetDao {
         } catch (Exception e) {
 
             System.out.println("fail in database connection");
+            System.out.println("Error: " + e);
 
         }
     }
@@ -89,8 +91,69 @@ public class PetDao {
 
     }
 
+    public List<Pet> findAllPetsAboutOng(String id) {
+
+        String SQL = "SELECT * FROM PET WHERE IDUSER = ?";
+
+        try {
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1,id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<Pet> pets = new ArrayList<>();
+
+            while (resultSet.next()) {
+
+                String petId = resultSet.getString("id");
+                String petName = resultSet.getString("name");
+                String petImage = resultSet.getString("image");
+                String petSexo = resultSet.getString("GENDER");
+                String petIdade = resultSet.getString("AGE");
+
+
+                Pet pet = new Pet(petId,petName,petImage,petSexo,petIdade);
+
+                pets.add(pet);
+
+            }
+
+            System.out.println("success in select * pet");
+
+            connection.close();
+
+            return pets;
+
+        } catch (Exception e) {
+            System.out.println("fail in database connection");
+
+            return Collections.emptyList();
+
+        }
+
+    }
+
     public Pet petInfo(String id){
-        String SQL = "SELECT * FROM PET WHERE ID = ?";
+        String SQL = "SELECT " +
+                "PET.ID, " +
+                "PET.NAME, " +
+                "PET.TYPE, " +
+                "PET.BREED, " +
+                "PET.SIZE, " +
+                "PET.GENDER, " +
+                "PET.AGE, " +
+                "PET.DESCRIPTION, " +
+                "PET.IMAGE, " +
+                "USERS.USERNAME, " +
+                "USERS.EMAIL, " +
+                "USERS.ADDRESS, " +
+                "USERS.CEP " +
+                "FROM PET " +
+                "INNER JOIN USERS ON USERS.ID = PET.IDUSER " +
+                "WHERE PET.ID = ?";
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -111,8 +174,12 @@ public class PetDao {
                 String petSexo = resultSet.getString("GENDER");
                 String petIdade = resultSet.getString("AGE");
                 String petDescricao = resultSet.getString("DESCRIPTION");
+                String username = resultSet.getString("USERNAME");
+                String userEmail = resultSet.getString("EMAIL");
+                String userAddress = resultSet.getString("ADDRESS");
+                String userCep = resultSet.getString("CEP");
 
-                Pet pet = new Pet(petId,petName,petTipo,petRaca,petTamanho,petSexo,petIdade,petDescricao,petImage);
+                Pet pet = new Pet(petId,petName,petTipo,petRaca,petTamanho,petSexo,petIdade,petDescricao,petImage, username,userEmail,userAddress,userCep);
                 System.out.println(pet.getImage());
                 connection.close();
 

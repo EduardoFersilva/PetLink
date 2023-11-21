@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,8 @@ public class PetInfoServlet extends HttpServlet{
 
         String petId = req.getParameter("id");
         Pet pet = new PetDao().petInfo(petId);
-        
+
+        System.out.println();
 
         System.out.println("PET: " + pet.getName());
         

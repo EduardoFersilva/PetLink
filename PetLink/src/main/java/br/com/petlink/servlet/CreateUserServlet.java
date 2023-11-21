@@ -24,12 +24,12 @@ public class CreateUserServlet  extends HttpServlet {
         String userName = req.getParameter("user-name");
         String password = req.getParameter("user-password");
         String email = req.getParameter("user-email");
-        String cpf = req.getParameter("user-cpf");
+        String cnpj = req.getParameter("user-cnpj");
         String address = req.getParameter("user-address");
         String age = req.getParameter("user-age");
         String cep = req.getParameter("user-cep");
     
-        Users users = new Users(userName, password, email, cpf, age, address, cep);
+        Users users = new Users(userName, password, email, cnpj, age, address, cep);
         new UserDao().createUser(users);
     
         // Após criar o usuário com sucesso, redirecionar para a página de login

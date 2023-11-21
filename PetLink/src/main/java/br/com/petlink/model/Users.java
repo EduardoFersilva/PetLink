@@ -2,27 +2,35 @@ package br.com.petlink.model;
 
 public class Users {
 
+    private String id;
+
     private String userName;
     private String password;
     private String email;
-    private String cpf;
+    private String cnpj;
     private String age;
     private String address;
     private String cep;
 
-    public Users(String userName, String password, String email, String cpf, String age, String address, String cep) {
+    public Users(String userName, String password, String email, String cnpj, String age, String address, String cep) {
         this.userName = userName;
         this.password = password;
         this.email = email;
-        this.cpf = cpf;
+        this.cnpj = cnpj;
         this.age = age;
         this.address = address;
         this.cep = cep;
     }
 
+    public Users(String userName, String email, String address, String cep) {
+        this.userName = userName;
+        this.email = email;
+        this.address = address;
+        this.cep = cep;
+    }
 
 
-    public Users(String userName , String password) {
+    public Users(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }
@@ -39,8 +47,8 @@ public class Users {
         this.email = email;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpf(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public void setAge(String age) {
@@ -55,6 +63,10 @@ public class Users {
         this.cep = cep;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -67,8 +79,8 @@ public class Users {
         return email;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCnpj() {
+        return cnpj;
     }
 
     public String getAge() {
@@ -83,5 +95,7 @@ public class Users {
         return cep;
     }
 
-
+    public String getId() {
+        return id;
+    }
 }

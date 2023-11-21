@@ -13,10 +13,10 @@ public class UserDao {
 
     public void createUser(Users users) {
 
-        String SQL = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL,CPF,AGE,ADDRESS,CEP) VALUES (?, ? , ? , ? , ? ,? , ?)";
+        String SQL = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL,CNPJ,AGE,ADDRESS,CEP) VALUES (?, ? , ? , ? , ? ,? , ?)";
 
         try {
-
+            System.out.println("CNPJ: " + users.getCnpj());
             Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -24,7 +24,7 @@ public class UserDao {
             preparedStatement.setString(1, users.getUserName());
             preparedStatement.setString(2, users.getPassword());
             preparedStatement.setString(3, users.getEmail());
-            preparedStatement.setString(4, users.getCpf());
+            preparedStatement.setString(4, users.getCnpj());
             preparedStatement.setString(5, users.getAge());
             preparedStatement.setString(6, users.getAddress());
             preparedStatement.setString(7, users.getCep());
@@ -42,7 +42,7 @@ public class UserDao {
         }
     }
 
-    public boolean verifyCredentials(Users users) {
+    public String verifyCredentials(Users users) {
 
         String SQL = "SELECT * FROM USERS WHERE USERNAME =  ?";
 
@@ -62,22 +62,22 @@ public class UserDao {
 
               if(password.equals(users.getPassword())){
 
-                  return true;
+                  return resultSet.getString("ID");
 
               }
 
            }
            connection.close();
-            return false;
+            return "false";
 
 
 
         } catch (Exception e){
                 System.out.println("Error " +  e.getMessage());
-                return false;
+                return "false";
 
+
+        }
 
     }
-
-}
 }

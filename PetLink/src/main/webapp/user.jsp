@@ -30,7 +30,7 @@
                 <div class="contEmail">
                     <div class="contCpf">
                         <input type="email" id="user-email" placeholder="E-mail" name="user-email" class="input" value="${param.email}" required>
-                        <input type="text" id="user-cpf" placeholder="CPF" name="user-cpf" class="input" value="${param.cpf}" required pattern="[0-9]{11}" title="Digite um CPF válido (apenas números)">
+                        <input type="text" id="user-cnpj" placeholder="CNPJ" name="user-cnpj" class="input" value="${param.cnpj}" required pattern="[0-9]{11}" title="Digite um CNPJ válido (apenas números)">
                     </div>
                     <div class="date">
                         <input type="date" id="user-age"  name="user-age" class="input" value="${param.age}" required>

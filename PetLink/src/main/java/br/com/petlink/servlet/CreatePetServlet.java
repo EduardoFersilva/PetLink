@@ -42,7 +42,8 @@ public class CreatePetServlet  extends HttpServlet {
         String idade = parameters.get("pet-idade");
         String description = parameters.get("pet-description");
         String image = parameters.get("image");
-        Pet pet = new Pet(id,name,tipo,breed,porte,sexo,idade,description,image);
+        String idUser = String.valueOf(request.getSession().getAttribute("id"));
+        Pet pet = new Pet(id,name,tipo,breed,porte,sexo,idade,description,image,idUser);
        PetDao petDao = new PetDao();
         if (id.isBlank()) {
             petDao.createPet(pet);

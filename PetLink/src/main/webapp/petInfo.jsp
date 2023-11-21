@@ -68,23 +68,17 @@
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Nome:</p>
-                                <p class="textInfo">Ong dos Dog</p class="textInfo">
+                                <p class="textInfo">${pet.ong.userName}</p class="textInfo">
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Cep:</p>
-                                <p class="textInfo"> 82656-070</p class="textInfo">
+                                <p class="textInfo"> ${pet.ong.cep}</p class="textInfo">
                             </div>
-
-                            <div class="containerSessao contato">
-                                <p class="sessaoTitulo">Contato:</p>
-                                <p class="textInfo">727393938739</p class="textInfo">
-                            </div>
-
                             
                             <div class="containerSessao contato">
                                 <p class="sessaoTitulo">Endere&ccedilo:</p>
-                                <p class="textInfo"> RUA dos Dogs, 76</p class="textInfo">
+                                <p class="textInfo">${pet.ong.address} - ${pet.ong.cep}</p class="textInfo">
                             </div>
 
                         </div>

@@ -1,10 +1,14 @@
 package br.com.petlink.model;
 
+import org.h2.engine.User;
+
 public class Pet {
 
     private String id;
 
+    private String idUser;
 
+    private Users ong;
 
     private String name;
 
@@ -36,15 +40,16 @@ public class Pet {
 
     }
 
-    public Pet(String id, String name, String image, String sexo, String idade) {
+    public Pet(String id, String name, String image, String sexo, String idade ) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.sexo = sexo;
         this.idade = idade;
+
     }
 
-    public Pet(String id, String name, String tipo, String breed, String porte, String sexo, String idade, String description, String image) {
+    public Pet(String id, String name, String tipo, String breed, String porte, String sexo, String idade, String description, String image, String idUser) {
         this.id = id;
         this.name = name;
         this.tipo = tipo;
@@ -54,6 +59,7 @@ public class Pet {
         this.idade = idade;
         this.description = description;
         this.image = image;
+        this.idUser = idUser;
     }
 
     public Pet(String id, String name) {
@@ -65,6 +71,27 @@ public class Pet {
         this.name = name;
     }
 
+    public Pet(String petId, String petName, String petTipo, String petRaca, String petTamanho, String petSexo, String petIdade, String petDescricao, String petImage, String username, String userEmail, String userAddress, String userCep) {
+        this.id = petId;
+        this.name = petName;
+        this.tipo = petTipo;
+        this.breed = petRaca;
+        this.porte = petTamanho;
+        this.sexo = petSexo;
+        this.idade = petIdade;
+        this.description = petDescricao;
+        this.image = petImage;
+        this.ong = new Users(username, userEmail, userAddress, userCep);
+    }
+
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public Users getOng() {
+        return ong;
+    }
+
     public String getName() {
         return name;
     }
@@ -74,6 +101,10 @@ public class Pet {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 
     public void setName(String name) {
@@ -138,7 +169,3 @@ public class Pet {
 
 
 }
-
-
-
-

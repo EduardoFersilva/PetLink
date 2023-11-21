@@ -17,16 +17,15 @@ public class ListPetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Pet> pets =  new PetDao().findAllPets();
-
-        req.setAttribute("pets",pets);
-
         if (req.getSession().getAttribute("loggedUser") != null) {
-
+            System.out.println(String.valueOf(req.getSession().getAttribute("id")));
+            List<Pet> pets =  new PetDao().findAllPetsAboutOng(String.valueOf(req.getSession().getAttribute("id")));
+            req.setAttribute("pets",pets);
             req.getRequestDispatcher("/dashboard.jsp").forward(req,resp);
 
         }else{
-
+            List<Pet> pets =  new PetDao().findAllPets();
+            req.setAttribute("pets",pets);
             req.getRequestDispatcher("/index.jsp").forward(req,resp);
 
         }
