@@ -31,32 +31,32 @@
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Idade:</p>
-                                <p class="textInfo">${pet.idade}</p class="textInfo">
+                                <p class="textInfo">${pet.idade}</p>
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Tipo:</p>
-                                <p class="textInfo"> ${pet.tipo}</p class="textInfo">                   
+                                <p class="textInfo"> ${pet.tipo}</p>                   
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Sexo:</p>
-                                <p class="textInfo">${pet.sexo}</p class="textInfo">
+                                <p class="textInfo">${pet.sexo}</p>
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Porte:</p>
-                                <p class="textInfo">${pet.porte}</p class="textInfo">
+                                <p class="textInfo">${pet.porte}</p>
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Ra&ccedila:</p>
-                                <p class="textInfo"> ${pet.breed}</p class="textInfo">                   
+                                <p class="textInfo"> ${pet.breed}</p>                   
                             </div>
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Descri&ccedil&atildeo:</p>
-                                <p class="textInfo"> ${pet.description}</p class="textInfo">                   
+                                <p class="textInfo"> ${pet.description}</p>                   
                             </div>
 
                         </div>
@@ -68,17 +68,17 @@
 
                             <div class="containerSessao">
                                 <p class="sessaoTitulo">Nome:</p>
-                                <p class="textInfo">${pet.ong.userName}</p class="textInfo">
+                                <p class="textInfo">${pet.ong.userName}</p>
                             </div>
 
                             <div class="containerSessao">
-                                <p class="sessaoTitulo">Cep:</p>
-                                <p class="textInfo"> ${pet.ong.cep}</p class="textInfo">
+                                <p class="sessaoTitulo">Email:</p>
+                                <a href="mailto:${pet.ong.email}" class="textInfo"> ${pet.ong.email}</a>
                             </div>
                             
                             <div class="containerSessao contato">
                                 <p class="sessaoTitulo">Endere&ccedilo:</p>
-                                <p class="textInfo">${pet.ong.address} - ${pet.ong.cep}</p class="textInfo">
+                                <p class="textInfo">${pet.ong.address} - ${pet.ong.cep}</p>
                             </div>
 
                         </div>
